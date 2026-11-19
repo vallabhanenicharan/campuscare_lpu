@@ -1,0 +1,26 @@
+/* Account registration and role-specific workspaces */
+.login-role-picker { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.register-prompt { margin: 22px 0 0; color: #4e5a70; font-size: 15px; text-align: center; }
+.register-prompt button { border: 0; background: none; color: #a33e19; font: inherit; font-weight: 700; cursor: pointer; text-decoration: underline; }
+.registration-card { max-height: min(90vh, 900px); overflow-y: auto; width: min(640px, calc(100vw - 32px)); }
+.registration-card .form-row { align-items: start; }
+.registration-card [hidden], .role-overview[hidden] { display: none !important; }
+.registration-card .form-control { width: 100%; }
+.registration-card .submit-button { margin-top: 15px; }
+.role-overview { margin: 0 0 24px; }
+.role-overview-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; padding: 30px; border-radius: 20px; background: linear-gradient(120deg, #152b4f, #274a6d); color: white; box-shadow: 0 12px 30px #18324f20; }
+[data-role="technician"] .role-overview-heading { background: linear-gradient(120deg, #174b4b, #236d69); }
+.role-overview-heading span { color: #b6d4df; font-size: 12px; font-weight: 800; letter-spacing: .11em; }
+.role-overview-heading h2 { margin: 8px 0; color: white; font-size: clamp(26px, 3vw, 40px); letter-spacing: -.03em; }
+.role-overview-heading p { max-width: 580px; margin: 0; color: #e4eef5; font-size: 16px; line-height: 1.5; }
+.role-primary { flex: none; padding: 12px 18px; border: 0; border-radius: 9px; background: white; color: #173352; font: inherit; font-weight: 700; cursor: pointer; }
+.role-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 16px; }
+.role-metric { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; min-height: 145px; padding: 19px; border: 1px solid #e0e5e8; border-radius: 14px; background: white; color: #172a47; text-align: left; font: inherit; cursor: pointer; box-shadow: 0 5px 18px #192c4210; }
+.role-metric:hover, .role-metric:focus-visible { border-color: #59848d; box-shadow: 0 6px 20px #173c3b20; }
+.role-metric span { font-size: 14px; font-weight: 700; }
+.role-metric strong { font-size: 30px; line-height: 1; }
+.role-metric small { color: #526779; font-size: 13px; }
+[data-role="warden"] .hero-banner, [data-role="warden"] .stats-grid, [data-role="warden"] .dashboard-grid,
+[data-role="technician"] .hero-banner, [data-role="technician"] .stats-grid, [data-role="technician"] .dashboard-grid { display: none !important; }
+@media (max-width: 850px) { .role-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 540px) { .role-overview-heading { align-items: start; flex-direction: column; padding: 22px; } .role-metrics { gap: 8px; } .role-metric { min-height: 125px; padding: 14px; } .registration-card .form-row { display: grid; grid-template-columns: 1fr; } }

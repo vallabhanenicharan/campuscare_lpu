@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#14203c" />
+    <title>CampusCare — LPU Maintenance</title>
+    <link rel="icon" href="lpu-logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="premium.css" />
+    <link rel="stylesheet" href="experience.css" />
+    <link rel="stylesheet" href="lpu-theme.css" />
+    <link rel="stylesheet" href="reference-ui.css" />
+    <link rel="stylesheet" href="features.css" />
+    <link rel="stylesheet" href="staff-queue.css" />
+    <link rel="stylesheet" href="mobile-improvements.css" />
+    <link rel="stylesheet" href="roles.css" />
+  </head>
+  <body>
+    <main class="login-screen" id="login-screen">
+      <section class="login-showcase" aria-label="CampusCare introduction">
+        <a class="brand login-brand" href="#" aria-label="CampusCare home">
+          <img class="lpu-emblem" src="lpu-logo.svg" alt="" />
+          <span class="brand-copy"><strong>Campus<span>Care</span></strong><small>LOVELY PROFESSIONAL UNIVERSITY</small></span>
+        </a>
+        <div class="login-message">
+          <span class="login-eyebrow"><i></i> RESIDENTIAL SERVICES / LPU</span>
+          <h1>A better place<br />to <em>live and learn.</em></h1>
+          <p>One place to report hostel maintenance issues and follow the work through to completion.</p>
+          <div class="login-process" aria-label="How CampusCare works">
+            <div><span>01</span><strong>Report an issue</strong><small>Tell us what needs attention</small></div>
+            <div><span>02</span><strong>Track progress</strong><small>See updates from the team</small></div>
+            <div><span>03</span><strong>Get it resolved</strong><small>Stay informed until it’s fixed</small></div>
+          </div>
+          <div class="login-preview" aria-hidden="true">
+            <div class="login-preview-icon">✓</div>
+            <div><small>YOUR CAMPUS, TAKEN CARE OF</small><strong>Every request has a next step.</strong></div>
+            <span>↗</span>
+          </div>
+        </div>
+        <div class="login-art" aria-hidden="true">
+          <div class="login-art-sun"></div>
+          <div class="login-art-building building-a"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="login-art-building building-b"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="login-art-plant"><i></i><i></i><b></b></div>
+        </div>
+        <div class="login-showcase-footer"><span>MADE FOR CAMPUS LIFE</span><span>PHAGWARA · PUNJAB</span></div>
+      </section>
+      <section class="login-panel">
+        <div class="login-form-wrap">
+          <div class="mobile-login-brand">
+            <img class="lpu-emblem" src="lpu-logo.svg" alt="" />
+            <span class="brand-copy"><strong>Campus<span>Care</span></strong><small>LOVELY PROFESSIONAL UNIVERSITY</small></span>
+          </div>
+          <div class="login-heading">
+            <span class="login-kicker">YOUR CAMPUS SERVICES PORTAL</span>
+            <h2>Welcome back.</h2>
+            <p id="login-description">Sign in to report and track maintenance issues.</p>
+          </div>
+          <div class="login-role-picker" role="group" aria-label="Choose account type">
+            <button type="button" class="selected" data-login-role="student" aria-pressed="true">Student</button>
+            <button type="button" data-login-role="staff" aria-pressed="false">Staff</button>
+            <button type="button" data-login-role="technician" aria-pressed="false">Technician</button>
+          </div>
+          <div class="demo-accounts">
+            <div class="demo-heading"><span id="demo-heading-label">CONTINUE WITH A STUDENT DEMO</span><i></i></div>
+            <button class="demo-account" type="button" data-demo-account="aarav" data-account-type="student" aria-label="Continue as Aarav Sharma">
+              <span class="avatar avatar-student">AS</span><span><strong>Aarav Sharma</strong><small>Student · BH-2 · SAMPLE2024</small></span><span class="demo-arrow" aria-hidden="true">→</span>
+            </button>
+            <button class="demo-account" type="button" data-demo-account="priya" data-account-type="student" aria-label="Continue as Priya Verma">
+              <span class="avatar avatar-priya">PV</span><span><strong>Priya Verma</strong><small>Student · GH-1 · SAMPLE2025</small></span><span class="demo-arrow" aria-hidden="true">→</span>
+            </button>
+            <button class="demo-account" type="button" data-demo-account="warden" data-account-type="staff" aria-label="Continue as Hostel Warden" hidden><span class="avatar avatar-tech">HW</span><span><strong>Hostel Warden</strong><small>Warden · WARDEN001</small></span></button>
+            <button class="demo-account" type="button" data-demo-account="staff-rk" data-account-type="technician" aria-label="Continue as R. Kumar" hidden>
+              <span class="avatar avatar-tech">RK</span><span><strong>R. Kumar</strong><small>Maintenance staff · STAFF004</small></span><span class="demo-arrow" aria-hidden="true">→</span>
+            </button>
+            <p class="demo-note" id="demo-note">Select an account to sign in instantly, or use its demo ID above and password <strong>campus123</strong>.</p>
+          </div>
+          <form id="login-form" autocomplete="off" novalidate>
+            <div class="demo-heading manual-login-heading"><span>OR ENTER DEMO DETAILS</span><i></i></div>
+            <label class="field-label" id="login-identity-label" for="login-identity">Demo student ID or demo email</label>
+            <div class="login-input-wrap"><span class="login-input-icon">▣</span><input id="login-identity" name="demo_identity" autocomplete="off" placeholder="Enter a demo student ID or email" required /></div>
+            <label class="field-label login-password-label" for="login-password">Password</label>
+            <div class="login-input-wrap"><span class="login-input-icon">◇</span><input id="login-password" name="demo_password" type="password" autocomplete="off" placeholder="Enter the demo password" required /><button class="password-toggle" id="password-toggle" type="button" aria-label="Show password">Show</button></div>
+            <div class="login-options"><label class="remember-option"><input id="remember-me" type="checkbox" checked /><span>Keep me signed in</span></label><button id="forgot-password" type="button">Forgot password?</button></div>
+            <p class="login-error" id="login-error" role="alert" hidden></p>
+            <button class="primary-button login-submit" type="submit">Sign in <span>→</span></button>
+          </form>
+          <p class="register-prompt">New to CampusCare? <button type="button" id="open-registration">Create an account</button></p>
+          <div class="login-security"><span>▣</span> CampusCare account · Local server authentication</div>
+        </div>
+      </section>
+    </main>
+
+    <div class="app-shell" id="app-shell" hidden>
+      <aside class="sidebar">
+        <a class="brand" href="#" aria-label="CampusCare home">
+          <img class="lpu-emblem" src="lpu-logo.svg" alt="" />
+          <span class="brand-copy"><strong>Campus<span>Care</span></strong><small>LOVELY PROFESSIONAL UNIVERSITY</small></span>
+        </a>
+
+        <div class="campus-select">
+          <span class="campus-icon">L</span>
+          <span><strong>Residential Campus</strong><small>Phagwara, Punjab</small></span>
+          <span class="chevron">⌄</span>
+        </div>
+
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-nav="overview" title="Overview"><span class="nav-icon">▦</span>Overview</button>
+          <button class="nav-item" id="sidebar-report-button" type="button" title="Report an issue"><span class="nav-icon">＋</span>Report an issue</button>
+          <button class="nav-item" data-nav="complaints" title="My complaints"><span class="nav-icon">▤</span><span id="complaints-nav-label">My complaints</span><span class="nav-count" id="nav-count">4</span></button>
+          <button class="nav-item" data-nav="updates" title="Updates"><span class="nav-icon">◷</span>Updates<span class="notification-dot"></span></button>
+        </nav>
+
+        <p class="nav-label tools-label">QUICK LINKS</p>
+        <button class="nav-item" id="help-link"><span class="nav-icon">ⓘ</span>Help &amp; support</button>
+        <button class="nav-item" id="maintenance-contact-link"><span class="nav-icon">✉</span>Contact maintenance</button>
+        <div class="sidebar-bottom">
+          <div class="help-card">
+            <div class="help-orbit">✳</div>
+            <strong>Need maintenance help?</strong>
+            <p>Contact the residential team about a report or repair.</p>
+            <button id="help-button">Contact maintenance <span>↗</span></button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <div class="breadcrumbs"><span>Campus services</span><span class="crumb-slash">/</span><strong id="breadcrumb-current">Overview</strong></div>
+          <label class="search-box topbar-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 4 4"></path></svg><span class="sr-only">Search reports</span><input id="search-input" type="search" placeholder="Search by issue, location, status, or ID..." /></label>
+          <div class="topbar-right">
+            <span class="live-status"><span></span> Residential services</span>
+            <div class="notification-wrap">
+              <button class="icon-button notification-button" aria-label="Notifications" id="notification-button" aria-haspopup="true" aria-expanded="false" aria-controls="notification-panel">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+                <span class="notification-badge" id="notification-badge" hidden></span>
+              </button>
+              <section class="notification-panel" id="notification-panel" aria-label="Notifications" hidden>
+                <div class="notification-panel-header">
+                  <div><span>YOUR INBOX</span><strong>Notifications</strong></div>
+                  <button type="button" id="mark-notifications-read">Mark all read</button>
+                </div>
+                <div class="notification-list" id="notification-list"></div>
+                <p class="notification-empty" id="notification-empty" hidden>You’re all caught up. Messages from maintenance will show here.</p>
+              </section>
+            </div>
+            <button class="role-switch" id="role-switch"><span class="switch-icon">⇄</span><span id="switch-label">Switch account</span></button>
+            <div class="profile-wrap">
+              <button class="profile-button" id="profile-button" type="button" aria-label="Account options" aria-expanded="false" aria-controls="profile-menu">
+                <span class="avatar avatar-student" aria-hidden="true">AS</span>
+                <span class="profile-copy"><strong id="profile-name">Aarav Sharma</strong><small id="profile-role">Student · BH-2</small></span>
+                <span class="profile-more" aria-hidden="true">⌄</span>
+              </button>
+              <div class="profile-menu" id="profile-menu" aria-label="Account options" hidden>
+                <button class="profile-menu-item" id="account-details-button" type="button"><span aria-hidden="true">◉</span>Account details</button>
+                <button class="profile-menu-item signout-menu-item" id="logout-button" type="button"><span aria-hidden="true">↪</span>Sign out</button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="content">
+          <section class="welcome-row">
+            <div>
+              <div class="eyebrow"><span class="eyebrow-line"></span> <span id="workspace-label">STUDENT DASHBOARD</span></div>
+              <h1 id="welcome-title">Good morning, Aarav <span class="wave">✳</span></h1>
+              <p class="welcome-subtitle" id="welcome-subtitle">A better stay starts with a space that works. We’re on it.</p>
+            </div>
+          </section>
+
+          <section class="role-overview" id="role-overview" hidden aria-live="polite"></section>
+          <section class="hero-banner" aria-label="Maintenance service update">
+            <div class="hero-content">
+              <span class="hero-tag"><span></span> YOUR CAMPUS, CARED FOR</span>
+              <h2>Your Voice.<br />Our <em>Action.</em></h2>
+              <p>Report hostel issues easily and<br />track them every step of the way.</p>
+              <button class="primary-button hero-report-button" id="report-button" type="button">Raise a complaint <span>→</span></button>
+              <button class="hero-link" id="hero-link" type="button">View your reports <span>↗</span></button>
+            </div>
+            <div class="hero-illustration" aria-hidden="true">
+              <div class="sun-disc"></div>
+              <div class="building building-back"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="building building-front"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="plant"><span></span><span></span><span></span><b></b></div>
+              <div class="hero-spark spark-one">✳</div><div class="hero-spark spark-two">✦</div>
+            </div>
+          </section>
+
+          <section class="stats-grid" aria-label="Complaint summary">
+            <article class="stat-card">
+              <span class="stat-icon stat-red">▤</span><span class="stat-label">Total complaints</span>
+              <div class="stat-value" id="stat-total">04 <span class="stat-trend">this month</span></div>
+              <div class="stat-foot"><span class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>Your reports so far</div>
+            </article>
+            <article class="stat-card">
+              <span class="stat-icon stat-amber">◷</span><span class="stat-label">In progress</span>
+              <div class="stat-value" id="stat-progress">02 <span class="stat-trend">being worked on</span></div>
+              <div class="stat-foot"><span class="status-pip amber"></span>Technicians are on it</div>
+            </article>
+            <article class="stat-card">
+              <span class="stat-icon stat-green">✓</span><span class="stat-label">Resolved</span>
+              <div class="stat-value" id="stat-resolved">01 <span class="stat-trend">issue fixed</span></div>
+              <div class="stat-foot"><span class="status-pip green"></span>Completed reports</div>
+            </article>
+            <article class="stat-card response-card">
+              <span class="stat-icon stat-blue">◷</span><span class="stat-label">Submitted</span>
+              <div class="stat-value" id="stat-submitted">01</div>
+              <div class="stat-foot"><span class="status-pip blue"></span>Awaiting next step</div>
+            </article>
+          </section>
+
+          <section class="dashboard-grid" aria-label="Complaint tracking and updates">
+            <article class="tracking-card">
+              <div class="panel-heading"><div><span class="panel-heading-icon">✦</span><h2>Track your complaint</h2></div><button type="button" id="track-view-all">View all <span>→</span></button></div>
+              <div class="tracking-steps" id="tracking-steps" aria-label="Complaint progress"></div>
+              <div class="tracking-feature">
+                <span class="tracking-feature-icon" aria-hidden="true">⌂</span>
+                <div class="tracking-feature-copy"><small id="hero-focus-label">LATEST ACTIVE ISSUE</small><strong id="hero-focus-title">No requests yet</strong><span class="status-chip submitted" id="hero-focus-status" hidden></span><span id="hero-focus-meta">Your updates will appear here</span><span id="hero-focus-visit"></span></div>
+                <button type="button" id="hero-focus-button" class="focus-button" disabled>View details <span>→</span></button>
+              </div>
+              <div class="tracking-count"><strong id="hero-open-count">00</strong> <span id="hero-open-label">open requests</span></div>
+            </article>
+            <div class="dashboard-side">
+              <article class="recent-card"><div class="panel-heading"><div><span class="panel-heading-icon">♢</span><h2>Recent updates</h2></div><button type="button" id="recent-view-all">View all <span>→</span></button></div><div id="dashboard-recent" class="dashboard-recent"></div></article>
+              <button type="button" class="quick-support" id="quick-contact-button"><span class="support-glyph">✦</span><span><strong>Need maintenance help?</strong><small>Contact the residential team</small></span><b>→</b></button>
+            </div>
+          </section>
+
+          <section id="staff-queue-section" class="staff-queue-section" hidden aria-label="Maintenance work queue"></section>
+
+          <section class="updates-section" id="updates-section" hidden aria-labelledby="updates-title">
+            <div class="section-heading updates-heading">
+              <div><div class="section-kicker">YOUR LATEST NEWS</div><h2 id="updates-title">Updates &amp; visits</h2></div>
+              <span class="updates-live"><i></i> Updated from your reports</span>
+            </div>
+            <div class="updates-list" id="updates-list"></div>
+            <div class="updates-empty" id="updates-empty" hidden>
+              <span>◷</span><strong>No updates just yet</strong>
+              <p>When something changes with your reports, you’ll see it here.</p>
+            </div>
+          </section>
+
+          <section class="complaints-section" id="complaints-section">
+            <div class="section-heading">
+              <div><div class="section-kicker" id="list-kicker">THE FOLLOW-THROUGH</div><h2 id="list-title">Your complaints <span class="list-count" id="list-count">04</span></h2></div>
+              <div class="list-actions">
+                <label class="filter-wrap"><span class="sr-only">Filter complaints</span><select id="status-filter"><option value="all">All statuses</option><option value="Submitted">Submitted</option><option value="Assigned">Assigned</option><option value="In progress">In progress</option><option value="Resolved">Resolved</option><option value="Closed">Closed</option></select></label>
+              </div>
+            </div>
+            <div class="complaints-table">
+              <div class="table-head"><span id="issue-heading">ISSUE</span><span id="location-heading">LOCATION</span><span>STATUS</span><span>LAST UPDATE</span><span></span></div>
+              <div id="complaint-list"></div>
+              <div class="empty-state" id="empty-state" hidden><span>✳</span><strong>No reports found</strong><p>Try adjusting your search or filters.</p></div>
+            </div>
+            <div class="table-footer"><span id="footer-count">Showing 4 of 4 reports</span><button id="show-all-button">View all reports <span>→</span></button></div>
+          </section>
+          <footer class="page-footer"><span>CampusCare <i>·</i> LPU Residential Services</span><span>Supporting a better campus experience</span></footer>
+        </div>
+      </main>
+    </div>
+
+    <div class="overlay" id="registration-overlay" hidden>
+      <section class="modal-card registration-card" role="dialog" aria-modal="true" aria-labelledby="registration-title">
+        <button class="modal-close" id="registration-close" type="button" aria-label="Close registration">×</button>
+        <div class="modal-kicker">JOIN CAMPUSCARE</div>
+        <h2 id="registration-title">Create your account.</h2>
+        <p class="modal-description">Choose your role and enter your details to get started.</p>
+        <form id="registration-form">
+          <label class="field-label" for="register-kind">Account type</label>
+          <select class="form-control" id="register-kind" name="kind"><option value="student">Student</option><option value="warden">Warden</option><option value="technician">Technician</option></select>
+          <div class="form-row"><div><label class="field-label" for="register-name">Full name</label><input class="form-control" id="register-name" name="name" required minlength="2" maxlength="100" autocomplete="name" /></div><div><label class="field-label" for="register-identity">Student or staff ID</label><input class="form-control" id="register-identity" name="identity" required minlength="3" maxlength="80" pattern="[A-Za-z0-9][A-Za-z0-9._-]{2,79}" autocomplete="username" /></div></div>
+          <label class="field-label" for="register-email">Email address</label><input class="form-control" id="register-email" name="email" type="email" required maxlength="160" autocomplete="email" />
+          <div class="form-row student-fields"><div><label class="field-label" for="register-hostel">Hostel</label><input class="form-control" id="register-hostel" name="hostel" maxlength="30" placeholder="e.g. BH-2" required /></div><div><label class="field-label" for="register-room">Room / area</label><input class="form-control" id="register-room" name="room" maxlength="40" placeholder="e.g. Room 304" required /></div></div>
+          <div id="register-department-group" hidden><label class="field-label" for="register-department">Maintenance department</label><input class="form-control" id="register-department" name="department" maxlength="60" placeholder="e.g. Electrical" /></div>
+          <div id="register-staff-group" hidden><label class="field-label" for="register-staff-code">Staff registration code</label><input class="form-control" id="register-staff-code" name="staffCode" type="password" autocomplete="off" /><p class="field-hint">Ask your administrator for the staff code.</p></div>
+          <div class="form-row"><div><label class="field-label" for="register-password">Password</label><input class="form-control" id="register-password" name="password" type="password" minlength="8" maxlength="256" autocomplete="new-password" required /></div><div><label class="field-label" for="register-confirm">Confirm password</label><input class="form-control" id="register-confirm" type="password" minlength="8" maxlength="256" autocomplete="new-password" required /></div></div>
+          <p class="field-hint">Use at least 8 characters for your password.</p>
+          <p class="form-error" id="registration-error" role="alert" hidden></p>
+          <button class="primary-button submit-button" type="submit">Create account</button>
+        </form>
+      </section>
+    </div>
+
+    <div class="overlay" id="modal-overlay" hidden>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" data-close aria-label="Close dialog">×</button>
+        <div class="modal-kicker"><span class="status-pip red"></span> LPU CAMPUS SERVICES</div>
+        <h2 id="modal-title">Let’s get it sorted.</h2>
+        <p class="modal-description">Tell us what needs attention. We’ll keep you posted at every step.</p>
+        <form id="complaint-form">
+          <label class="field-label" for="issue-title">What’s the issue?</label>
+          <input class="form-control" id="issue-title" name="title" placeholder="e.g. Ceiling fan not working" required maxlength="70" />
+          <div class="form-row">
+            <div><label class="field-label" for="issue-category">Category</label><select class="form-control" id="issue-category" name="category" required><option value="">Select category</option><option>Electrical</option><option>Plumbing</option><option>Carpentry</option><option>Cleaning</option><option>Other</option></select></div>
+            <div><label class="field-label" for="issue-priority">Urgency</label><select class="form-control" id="issue-priority" name="priority" aria-describedby="urgency-help"><option>Standard</option><option>Urgent</option></select></div>
+          </div>
+          <p class="field-hint" id="urgency-help">Choose urgent for a safety issue or a serious interruption to essential services.</p>
+          <div class="form-row">
+            <div><label class="field-label" for="issue-hostel">Hostel</label><select class="form-control" id="issue-hostel" name="hostel" required><option>BH-2</option><option>BH-1</option><option>BH-3</option><option>GH-1</option><option>GH-2</option></select></div>
+            <div><label class="field-label" for="issue-room">Room / area</label><input class="form-control" id="issue-room" name="room" placeholder="e.g. Room 304" required maxlength="40" /></div>
+          </div>
+          <label class="field-label" for="issue-details">Describe the issue</label>
+          <textarea class="form-control" id="issue-details" name="details" placeholder="Anything that could help our team..." rows="3" maxlength="240" required></textarea>
+          <label class="field-label" for="issue-photo">Add a photo <span class="optional">(optional)</span></label>
+          <div class="photo-upload"><input id="issue-photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp" aria-describedby="photo-help" /><p class="field-hint" id="photo-help">JPEG, PNG or WebP, up to 5 MB.</p><div class="photo-preview" id="photo-preview" hidden><img id="photo-preview-image" alt="Selected photo preview" /><button type="button" id="remove-photo">Remove photo</button></div></div>
+          <p class="form-error" id="complaint-error" role="alert" hidden></p>
+          <div class="form-note"><span>◎</span> You’ll get updates here as soon as something changes.</div>
+          <button class="primary-button submit-button" type="submit">Submit report <span>→</span></button>
+        </form>
+      </section>
+    </div>
+
+    <div class="overlay" id="confirmation-overlay" hidden>
+      <section class="modal-card confirmation-card" role="dialog" aria-modal="true" aria-labelledby="confirmation-title" aria-describedby="confirmation-description">
+        <span class="confirmation-icon" aria-hidden="true">✓</span>
+        <div class="modal-kicker">REPORT SUBMITTED</div>
+        <h2 id="confirmation-title">Your report is in.</h2>
+        <p class="modal-description" id="confirmation-description">Keep this complaint ID for reference.</p>
+        <div class="confirmation-id"><span>COMPLAINT ID</span><strong id="confirmation-id"></strong></div>
+        <button type="button" class="primary-button confirmation-action" id="confirmation-view">Track your report <span>→</span></button>
+        <button type="button" class="confirmation-close" id="confirmation-close">Back to dashboard</button>
+      </section>
+    </div>
+
+    <div class="overlay" id="account-overlay" hidden>
+      <section class="modal-card account-modal" role="dialog" aria-modal="true" aria-labelledby="account-modal-title">
+        <button class="modal-close" id="account-close" aria-label="Close account details">×</button>
+        <div class="modal-kicker"><span class="status-pip red"></span> CAMPUSCARE ACCOUNT</div>
+        <h2 id="account-modal-title">Your account</h2>
+        <p class="modal-description" id="account-modal-subtitle">Your personal and hostel details.</p>
+        <div class="account-details-grid" id="account-details-grid"></div>
+        <div class="account-settings">
+          <div class="detail-card-label">PREFERENCES</div>
+          <div id="account-preferences"></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="overlay" id="help-overlay" hidden>
+      <section class="modal-card help-modal" role="dialog" aria-modal="true" aria-labelledby="help-modal-title">
+        <button class="modal-close" id="help-close" aria-label="Close help">×</button>
+        <div class="modal-kicker"><span class="status-pip red"></span> CAMPUSCARE SITE GUIDE</div>
+        <h2 id="help-modal-title">Help using CampusCare</h2>
+        <p class="modal-description">Quick answers about signing in and using the website.</p>
+        <div class="help-topic-list">
+          <article><span>01</span><div><strong>Sign in to your account</strong><p>Choose Student or Staff, enter the email or ID for that account, then select Sign in. Demo accounts can fill the fields for you.</p></div></article>
+          <article><span>02</span><div><strong>Find your reports</strong><p>Open My complaints to search and filter reports. Select a report to see its details, updates, and assigned technician information.</p></div></article>
+          <article><span>03</span><div><strong>Check updates and messages</strong><p>The bell shows when a technician is assigned, a visit is scheduled, or a report changes. Open Updates for the latest status and visit information.</p></div></article>
+          <article><span>04</span><div><strong>Manage your account</strong><p>Select your profile in the top bar to view account details or sign out.</p></div></article>
+          <article><span>05</span><div><strong>Confirm the repair</strong><p>When the technician marks a report resolved, review the completion details and confirm closure. If it is not fixed, reopen or escalate it to the warden with a reason. You can also rate the service.</p></div></article>
+        </div>
+        <div class="help-demo-note">This prototype uses demo identities and a local SQLite database when run with server.js. It is not connected to LPU identity or maintenance systems.</div>
+      </section>
+    </div>
+
+    <div class="overlay" id="contact-overlay" hidden>
+      <section class="modal-card contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+        <button class="modal-close" id="contact-close" aria-label="Close contact form">×</button>
+        <div class="modal-kicker"><span class="status-pip red"></span> LPU RESIDENTIAL SERVICES</div>
+        <h2 id="contact-modal-title">Contact maintenance</h2>
+        <p class="modal-description">Compose an email to LPU’s general enquiries address about a report or repair. Your account information is added for context.</p>
+        <div class="support-layout">
+          <div class="support-main-card">
+            <div class="support-email-heading"><span class="support-email-icon">✉</span><div><span class="detail-card-label">LPU GENERAL ENQUIRIES</span><strong id="support-email-address">info@lpu.co.in</strong></div></div>
+            <label class="field-label" for="support-related-report">Related complaint <span class="optional">(optional)</span></label>
+            <select class="form-control" id="support-related-report"><option value="">General question</option></select>
+            <label class="field-label" for="support-subject">Email subject</label>
+            <input class="form-control" id="support-subject" value="CampusCare maintenance support" maxlength="100" />
+            <label class="field-label" for="support-message">Your message</label>
+            <textarea class="form-control support-message" id="support-message" rows="4" maxlength="1000" placeholder="Describe what you need help with..." required></textarea>
+            <p class="email-prefill-note"><span>◎</span> Your name, account ID, email, and hostel/room are added automatically.</p>
+            <a class="primary-button gmail-button" id="gmail-compose" href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">Open Gmail to compose <span>↗</span></a>
+            <p class="send-note">Review the prefilled email, then press <strong>Send</strong> in Gmail.</p>
+          </div>
+          <aside class="support-guide-card">
+            <span class="support-guide-kicker">EMAIL CHECKLIST</span>
+            <h3>Before you send</h3>
+            <ol class="email-steps">
+              <li><span>1</span><div><strong>Choose a clear subject</strong><small>Select a complaint to include its ID and issue.</small></div></li>
+              <li><span>2</span><div><strong>Explain what you need</strong><small>Add the details that will help the team follow up.</small></div></li>
+              <li><span>3</span><div><strong>Review and send in Gmail</strong><small>Add a photo if useful. Never include your password.</small></div></li>
+            </ol>
+            <div class="support-phone"><span>LPU GENERAL ENQUIRIES</span><strong>+91 1824 517000</strong><small>For hostel issues, you can also contact your warden.</small></div>
+          </aside>
+        </div>
+      </section>
+    </div>
+
+    <aside class="detail-drawer" id="detail-drawer" aria-label="Complaint details" aria-hidden="true">
+      <button class="drawer-close" id="drawer-close" aria-label="Close details">×</button>
+      <div id="drawer-content"></div>
+    </aside>
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="staff-queue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

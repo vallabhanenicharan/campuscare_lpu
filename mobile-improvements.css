@@ -1,0 +1,205 @@
+/* Readable navigation, report details, and controls on phones and tablets. */
+@media (max-width:800px) {
+  .app-shell .sidebar {
+    position:relative;
+    inset:auto;
+    width:100%;
+    height:auto;
+    padding:14px 14px 12px;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+    align-items:stretch;
+    overflow:visible;
+  }
+  .app-shell .sidebar::before { display:none; }
+  .app-shell .sidebar > .brand { grid-column:1 / -1; justify-self:start; padding:0; }
+  .app-shell .sidebar .brand-copy { display:flex; }
+  .app-shell .sidebar .brand-copy strong { font-size:18px; }
+  .app-shell .sidebar .brand-copy small { font-size:8px; }
+  .app-shell .sidebar .lpu-emblem { width:38px; height:38px; }
+  .app-shell .campus-select, .app-shell .nav-label, .app-shell .sidebar-bottom { display:none; }
+  .app-shell .main-nav {
+    grid-column:1 / -1;
+    width:100%;
+    margin:4px 0 0;
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:5px;
+  }
+  .app-shell .main-nav .nav-item,
+  .app-shell .main-nav .nav-item:not(.active) {
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:4px;
+    width:100%;
+    height:auto;
+    min-height:68px;
+    padding:7px 3px;
+    font-size:11px;
+    line-height:1.2;
+    text-align:center;
+    white-space:normal;
+  }
+  .app-shell .main-nav .nav-icon { display:block; width:auto; font-size:19px; line-height:1; }
+  .app-shell .main-nav .nav-count {
+    display:inline-grid;
+    place-items:center;
+    position:absolute;
+    top:3px;
+    right:4px;
+    min-width:18px;
+    min-height:18px;
+    margin:0;
+    padding:1px 4px;
+    font-size:10px;
+  }
+  .app-shell .main-nav .notification-dot { display:block; position:absolute; top:7px; right:8px; margin:0; }
+  .app-shell .sidebar > #help-link,
+  .app-shell .sidebar > #maintenance-contact-link {
+    display:flex;
+    justify-content:center;
+    width:100%;
+    height:auto;
+    min-height:44px;
+    padding:8px;
+    gap:7px;
+    font-size:12px;
+    line-height:1.25;
+    text-align:center;
+    white-space:normal;
+  }
+  .app-shell .main-area { margin-left:0; }
+  .topbar { gap:8px; }
+  .topbar-search { flex:1 1 0; width:auto; min-width:0; }
+  .topbar-search input { font-size:16px; }
+  .topbar-right { flex:0 0 auto; gap:6px; }
+  .topbar .icon-button, .topbar .role-switch, .topbar .profile-button { min-width:44px; min-height:44px; }
+  .topbar .role-switch { justify-content:center; }
+  .topbar .profile-button .avatar { width:38px; height:38px; }
+  .topbar .profile-copy, .topbar .profile-more { display:none; }
+  .topbar .profile-button { padding:0; justify-content:center; border:0; }
+  .topbar .role-switch #switch-label {
+    display:block;
+    position:absolute;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+  }
+  .content { padding-left:16px; padding-right:16px; }
+  .stat-label { font-size:12px; }
+  .stat-foot { font-size:11px; line-height:1.35; }
+  .tracking-step strong, .tracking-step small { font-size:11px; }
+  .tracking-step strong { font-size:13px; }
+  .tracking-step small { font-size:12px; line-height:1.35; }
+  .tracking-feature-copy > span, .tracking-count,
+  .recent-item small, .recent-item time, .quick-support small { font-size:12px; }
+  .complaint-row .status-chip { min-height:30px; padding:7px 9px; font-size:12px; }
+  .timeline-item strong { font-size:15px; }
+  .timeline-item small, .timeline-item p, .message-bubble time, .message-bubble p { font-size:14px; line-height:1.55; }
+  .message-bubble strong { font-size:14px; }
+  .sq-filters select, .sq-form input, .sq-form select { min-height:48px; font-size:16px; }
+  .sq-form textarea { font-size:16px; }
+  .sq-form button { min-height:48px; font-size:14px; }
+  .panel-heading > button, .tracking-feature .focus-button,
+  .table-footer button, .update-view-button, .notification-panel-header button,
+  .hero-link { min-height:44px; }
+  .primary-button, .tech-action, .feedback-submit { min-height:48px; }
+  .table-footer { min-height:48px; height:auto; }
+  .notification-panel, .profile-menu { max-width:calc(100vw - 24px); }
+  .profile-menu-item { min-height:48px; }
+  .modal-card { max-height:calc(100dvh - 32px); }
+  .modal-close, .drawer-close { min-width:44px; min-height:44px; }
+  .form-control, .login-input-wrap input,
+  .staff-message-form textarea, .feedback-card textarea { font-size:16px; }
+  .form-control, .login-input-wrap, .login-submit, .staff-message-form button { min-height:48px; }
+  .photo-upload input, .photo-preview button { min-height:44px; }
+  .password-toggle, .login-options > button { min-height:44px; }
+  .demo-account { min-height:56px; }
+  .field-label, #login-form .field-label { font-size:14px; }
+  .modal-description, .form-note, .help-topic-list p,
+  .timeline-item p, .message-bubble p { font-size:13px; line-height:1.55; }
+}
+
+@media (max-width:540px) {
+  .topbar { min-height:64px; height:auto; padding:10px 12px; }
+  .topbar .role-switch { width:44px; padding:0; }
+  .topbar-search { height:44px; padding:0 10px; }
+  .topbar-search input { font-size:14px; }
+  .content { padding-left:12px; padding-right:12px; }
+  .hero-banner { height:auto; }
+  .hero-banner p { font-size:13px; }
+  .hero-link { display:inline-flex; align-items:center; padding:8px 4px; }
+  .stats-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .stat-card { min-height:102px; }
+  .stat-label { font-size:11px; }
+  .stat-foot { font-size:10px; }
+  .tracking-feature .focus-button { min-width:110px; }
+  .recent-item { min-height:52px; align-items:center; }
+  .recent-item strong { font-size:13px; }
+  .recent-item small { font-size:11px; }
+  .recent-item time { display:none; }
+  .list-actions { width:100%; }
+  .filter-wrap { width:100%; }
+  .filter-wrap select { width:100%; max-width:none; min-height:44px; font-size:14px; }
+  .table-head, .staff-view .table-head { display:none; }
+  .complaint-row, .staff-view .complaint-row {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    grid-template-rows:auto auto auto;
+    gap:7px 10px;
+    padding:14px;
+    min-height:0;
+  }
+  .complaint-row .issue-cell { grid-column:1; grid-row:1; }
+  .complaint-row .issue-copy strong { font-size:13px; white-space:normal; overflow-wrap:anywhere; }
+  .complaint-row .issue-copy small { font-size:12px; }
+  .complaint-row .location-cell, .staff-view .complaint-row .location-cell {
+    display:block;
+    grid-column:1;
+    grid-row:2;
+    font-size:12px;
+    line-height:1.4;
+  }
+  .complaint-row .location-cell small, .staff-view .complaint-row .location-cell small { font-size:12px; }
+  .complaint-row > div:nth-child(3) { grid-column:2; grid-row:1; }
+  .complaint-row .status-chip { font-size:12px; }
+  .complaint-row .update-cell, .staff-view .complaint-row .update-cell {
+    display:block;
+    grid-column:1;
+    grid-row:3;
+    font-size:12px;
+  }
+  .complaint-row .row-arrow { grid-column:2; grid-row:2 / 4; justify-self:end; align-self:center; }
+  .complaint-row[data-deletable="true"] { padding-right:14px; }
+  .complaint-row[data-deletable="true"] .complaint-delete { position:static; grid-column:2; grid-row:3; justify-self:end; align-self:center; transform:none; min-height:40px; }
+  .modal-card { padding:26px 20px 22px; }
+  .modal-card h2 { padding-right:38px; }
+  .detail-drawer { width:100%; padding:42px 20px 26px; }
+}
+
+@media (max-width:360px) {
+  .app-shell .sidebar { padding-left:10px; padding-right:10px; }
+  .app-shell .main-nav .nav-item { font-size:10px; }
+  .app-shell .sidebar > #help-link,
+  .app-shell .sidebar > #maintenance-contact-link { font-size:11px; }
+  .topbar { padding-left:8px; padding-right:8px; }
+  .topbar-right { gap:3px; }
+  .topbar-search input { font-size:12px; }
+}
+
+@media (max-width:800px) {
+  .app-shell .main-nav .nav-item { font-size:12px; }
+  .app-shell .main-nav .nav-icon { font-size:21px; }
+  .tracking-feature { align-items:flex-start; }
+  .tracking-feature-copy strong { white-space:normal; }
+  .tracking-feature-copy .status-chip { min-height:28px; font-size:12px; }
+}
